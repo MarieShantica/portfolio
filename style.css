@@ -1,0 +1,240 @@
+/* Include Google Fonts link in your HTML file's <head> */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+
+/* Apply the Quicksand font globally */
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: #5C4040;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limit to avoid stretching on large screens */
+    margin: 0 auto;   /* Center the content */
+    padding: 0 15px;  /* Add padding for small screens */
+}
+
+
+.navbar {
+    position: sticky;
+    top: 0;  /* Stick to the top of the viewport */
+    z-index: 1000;  /* Ensure the navbar stays above other content */
+
+    display: flex;
+    width: 100%;  /* Use full width of the viewport */
+    height: 90px;
+    padding: 23px 5%;  /* Adjust padding using percentage for responsiveness */
+    justify-content: center;
+    align-items: center;
+    gap: 50px;  /* Reduce the gap to make it more compact */
+    flex-shrink: 0;
+    border-bottom: 2px solid #5C4040;  /* Using hex color directly */
+    background: linear-gradient(270deg, rgba(206, 252, 255, 0.50) 6%, rgba(255, 238, 206, 0.50) 37.5%, rgba(255, 191, 218, 0.50) 100%);
+}
+
+/* Optional: Adjust the nav items inside the navbar */
+.navbar-nav {
+    display: flex;
+    gap: 30px;  /* Adjust spacing between navbar items */
+}
+
+/* Optional: Center navbar items vertically and horizontally */
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navbar-brand img {
+    position: relative; /* Allows for positioning */
+    transition: top 0.3s ease, transform 0.3s ease; /* Smooth transitions for both position and scale */
+}
+  
+  .navbar-brand img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Media query for smaller screens */
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 10px;  /* Reduced padding for smaller screens */
+        height: 100px;  /* Adjust height */
+    }
+
+    .navbar-nav {
+        gap: 20px;  /* Reduce the gap between navbar items */
+    }
+
+    .navbar-brand img {
+        top: -10px;  /* Move the logo up when screen is minimized */
+    }
+}
+
+.resumeBtn {
+    color: white;
+    background-color: #5C4040;
+    transition: top 0.3s ease, transform 0.3s ease; /* Smooth transitions for both position and scale */
+    border-color: #5C4040;
+}
+
+.resumeBtn:hover {
+    color: #5C4040;
+    background-color: white;
+    border-color: #5C4040;
+    transform: scale(1.02);
+}
+
+
+  
+
+/* Add more corner radius to the 'resume' button */
+.btn {
+    border-radius: 30px;  /* Adjust the value as needed */
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.hero {
+    padding-top: 50px;
+    width: 100%;  /* Use full width of the viewport */
+
+}
+
+/* Default image size, set to 50% width */
+.hero-img {
+    width: 50%;
+    height: auto;  /* Ensure the aspect ratio is maintained */
+}
+
+/* Custom style for smaller screens (tablets and smaller) */
+@media (max-width: 768px) {
+    .hero-img {
+        width: 30%;  /* Reduce the size when the screen is smaller */
+    }
+}
+
+/* Make the image even smaller on very small screens (mobile) */
+@media (max-width: 576px) {
+    .hero-img {
+        width: 20%;  /* Make the image smaller on mobile */
+    }
+}
+
+/* Prevent image from becoming too large on medium screens (desktops) */
+@media (max-width: 992px) {
+    .hero-img {
+        width: 40%;  /* Ensure it doesn't grow beyond 50% on medium screens */
+    }
+}
+
+.lead {
+    font-weight: 500; /* Semi-bold */
+}
+
+.gradient-btn {
+    font-weight: 700;
+    width: 250px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #FFBFDA, #FFEECE, #CEFCFF);
+    border: 2px solid #5C4040;
+    color: #5C4040; /* Ensure text is visible and matches border color */
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    transition: all 0.3s ease; /* Smooth transitions for both position and scale */
+  }
+  
+  .gradient-btn:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
+    color: #5C4040;
+    transform: scale(1.03);
+  }
+  
+  .gradient-btn:active {
+    background: white; /* Solid white background on click */
+    color: #5C4040;
+  }
+
+  .blob {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 50%; /* Ensures a circular shape */
+    opacity: 0.5;
+    background: var(--yellow, #FFF1D4);
+    filter: blur(75px);
+    position: absolute; /* Ensures it can be positioned anywhere */
+    top: 0; /* Adjust position */
+    left: 0; /* Adjust position */
+    z-index: -1; /* Places it behind other content */
+  }
+
+  .blob-2 {
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 50%; /* Circular shape */
+    opacity: 0.3;
+    background:  var(--lightblue, #D5F8FA);
+    filter: blur(75px);
+    position: absolute; /* Allows free positioning */
+    bottom: 0; /* Positions the blob at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centers the blob perfectly */
+    z-index: -1; /* Places it behind content */
+  }
+
+  .blob-3 {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 50%; /* Circular shape */
+    background: rgba(255, 240, 240, 0.80);
+    filter: blur(75px);
+    position: absolute; /* Allows free positioning */
+    bottom: 0; /* Position the blob at the bottom */
+    right: 0; /* Position it at the right */
+    z-index: -1; /* Place behind other content */
+  }
+
+  .blob-4 {
+    width: 473px;
+    height: 499px;
+    flex-shrink: 0;
+    border-radius: 499px;
+    opacity: 0.25;
+    background: #E3F6D9;
+    filter: blur(75px);
+    position: absolute; /* Ensure it can be positioned anywhere */
+    bottom: 20px; /* Adjust vertical positioning */
+    left: 15%; /* Adjust horizontal positioning */
+    z-index: -1; /* Place it behind other content */
+  }
+
+  /* Initially hidden */
+.hidden {
+    display: none;
+}
+
+/* Optional: Add animation */
+#work-section {
+    transition: all 0.3s ease;
+}
+
+
+  
+  
+  
+  
+  
+
+  
+  
+
